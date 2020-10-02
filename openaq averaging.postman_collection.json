@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "c516015f-504e-4351-baa6-bc33a791f87b",
+		"name": "openaq averaging",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "annual averages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openaq.org/beta/averages?temporal=month&spatial=country&country=US",
+					"host": [
+						"api",
+						"openaq",
+						"org"
+					],
+					"path": [
+						"beta",
+						"averages"
+					],
+					"query": [
+						{
+							"key": "temporal",
+							"value": "month"
+						},
+						{
+							"key": "spatial",
+							"value": "country"
+						},
+						{
+							"key": "country",
+							"value": "US"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "monthly averages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openaq.org/beta/averages?temporal=month&spatial=country",
+					"host": [
+						"api",
+						"openaq",
+						"org"
+					],
+					"path": [
+						"beta",
+						"averages"
+					],
+					"query": [
+						{
+							"key": "temporal",
+							"value": "month"
+						},
+						{
+							"key": "spatial",
+							"value": "country"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invalid temporal value",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openaq.org/beta/averages?temporal=hourly&spatial=country",
+					"host": [
+						"api",
+						"openaq",
+						"org"
+					],
+					"path": [
+						"beta",
+						"averages"
+					],
+					"query": [
+						{
+							"key": "temporal",
+							"value": "hourly"
+						},
+						{
+							"key": "spatial",
+							"value": "country"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "averages for location",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openaq.org/beta/averages?temporal=month&spatial=location&location=Catawba+Indian+Natio",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openaq",
+						"org"
+					],
+					"path": [
+						"beta",
+						"averages"
+					],
+					"query": [
+						{
+							"key": "temporal",
+							"value": "month"
+						},
+						{
+							"key": "spatial",
+							"value": "location"
+						},
+						{
+							"key": "location",
+							"value": "Catawba+Indian+Natio"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "c3c57d1e-8aad-49ae-bcc9-3a1f3fa3c0bb",
+		"name": "openaq",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "locations by city",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openaq.org/v1/measurements?include_fields=mobile&country=US",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openaq",
+						"org"
+					],
+					"path": [
+						"v1",
+						"measurements"
+					],
+					"query": [
+						{
+							"key": "include_fields",
+							"value": "mobile"
+						},
+						{
+							"key": "country",
+							"value": "US"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d58eab51-3502-4174-ab00-e385ee950709",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "60ad29d4-eaae-4395-8983-648bc10982e7",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "55b0a3a5-47c3-4bb9-b359-1d3239e3bae5",
+			"key": "api_url",
+			"value": "https://api.openaq.org/"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
